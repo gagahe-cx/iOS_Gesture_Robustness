@@ -1,3 +1,2 @@
-*.rb linguist-language=Ruby
-*.glyphs linguist-language=OpenStep-Property-List
-*.es linguist-language=JavaScript
+* linguist-vendored
+*.js linguist-vendored=false
