@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://accelerometerdemo.netlify.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Accelerometer Demo</title>
+
+    <style>
+    /* .indicatorDot{
+        width: 30px;
+        height: 30px;
+        background-color: #ffab56;
+        border-radius: 50%;
+        position:fixed;
+    } */
+    body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(225, 223, 120);
+        }
+
+    </style>
+
+<script>    
+// var px = 50; // Position x and y
+// var py = 50;
+// var vx = 0.0; // Velocity x and y
+// var vy = 0.0;
+// var updateRate = 1/60; // Sensor refresh rate
+
+// function getAccel(){
+//     DeviceMotionEvent.requestPermission().then(response => {
+//         if (response == 'granted') {
+//        // Add a listener to get smartphone orientation 
+//            // in the alpha-beta-gamma axes (units in degrees)
+//             window.addEventListener('deviceorientation',(event) => {
+//                 // Expose each orientation angle in a more readable way
+//                 rotation_degrees = event.alpha;
+//                 frontToBack_degrees = event.beta;
+//                 leftToRight_degrees = event.gamma;
+                
+//                 // Update velocity according to how tilted the phone is
+//                 // Since phones are narrower than they are long, double the increase to the x velocity
+//                 vx = vx + leftToRight_degrees * updateRate*2; 
+//                 vy = vy + frontToBack_degrees * updateRate;
+                
+//                 // Update position and clip it to bounds
+//                 px = px + vx*.5;
+//                 if (px > 98 || px < 0){ 
+//                     px = Math.max(0, Math.min(98, px)) // Clip px between 0-98
+//                     vx = 0;
+//                 }
+
+//                 py = py + vy*.5;
+//                 if (py > 98 || py < 0){
+//                     py = Math.max(0, Math.min(98, py)) // Clip py between 0-98
+//                     vy = 0;
+//                 }
+                
+//                 dot = document.getElementsByClassName("indicatorDot")[0]
+//                 dot.setAttribute('style', "left:" + (px) + "%;" +
+//                                               "top:" + (py) + "%;");
+                
+//             });
+//         }
+//     });
+// }
+
+var lastAcceleration = { x: 0, y: 0, z: 0 };
+        var shakeThreshold = 15;
+
+        function getAccel() {
+            DeviceMotionEvent.requestPermission().then(response => {
+                if (response == 'granted') {
+                    window.addEventListener('devicemotion', (event) => {
+                        var acceleration = event.acceleration;
+                        if (Math.abs(acceleration.x - lastAcceleration.x) > shakeThreshold ||
+                            Math.abs(acceleration.y - lastAcceleration.y) > shakeThreshold ||
+                            Math.abs(acceleration.z - lastAcceleration.z) > shakeThreshold) {
+                            alert("Shake detected!");
+                        }
+                        lastAcceleration = acceleration;
+                    });
+                }
+            });
+            // Hide the button after it's clicked
+            document.getElementById('accelPermsButton').style.display = 'none';
+        }
+
+</script>
+
+
+</head>
+<body style="background-color:rgb(220, 222, 135);" data-new-gr-c-s-check-loaded="14.1131.0" data-gr-ext-installed="">
+
+<div id="main">
+    <button id="accelPermsButton" onclick="getAccel()" style="height:50px;">Get Accelerometer Permissions</button>
+
+
+    <div class="indicatorDot" style="left:30%; top:30%;"></div>
+</div>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

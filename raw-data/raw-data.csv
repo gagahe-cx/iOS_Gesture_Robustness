@@ -1,0 +1,41 @@
+nothing: 0; shaking: 1; phone upside down: 2,user 1,user 2,user 3,user 4,user 5,user 6
+walking-hand,0,1,1,1,1,1
+walking-hand,0,1,1,1,1,1
+walking-hand,0,1,1,1,0,1
+walking-hand,1,1,1,1,1,1
+walking-hand,1,1,1,1,0,1
+walking-bag,0,0,1,1,1,2
+walking-bag,1,1,1,1,1,2
+walking-bag,3,1,1,1,1,2
+walking-bag,1,1,1,1,1,0
+walking-bag,1,0,1,1,1,2
+pocket,0,1,1,1,1,0
+pocket,0,2,1,0,0,1
+pocket,1,3,1,1,0,0
+pocket,0,3,0,0,1,2
+pocket,1,3,0,0,1,0
+bag,0,1,1,0,1,1
+bag,1,0,0,1,1,1
+bag,0,0,0,0,0,0
+bag,0,1,0,0,0,0
+bag,0,0,1,1,1,0
+passing flipped,1,0,2,0,0,0
+passing flipped,0,0,2,0,1,0
+passing flipped,1,0,1,0,2,0
+passing flipped,0,0,0,0,2,0
+passing flipped,1,1,1,0,2,0
+hold phone flat while using it,0,0,0,2,0,0
+hold phone flat while using it,1,2,0,2,0,2
+hold phone flat while using it,1,2,2,2,0,0
+hold phone flat while using it,0,2,0,0,2,2
+hold phone flat while using it,0,2,0,0,2,0
+selfie,0,0,1,2,0,1
+selfie,1,1,2,0,0,2
+selfie,3,0,0,0,0,0
+selfie,0,1,2,1,1,0
+selfie,1,0,0,0,2,2
+dropping phone at a random angle,0,0,2,0,1,1
+dropping phone at a random angle,1,0,2,1,1,1
+dropping phone at a random angle,1,1,0,0,0,0
+dropping phone at a random angle,0,2,0,0,1,0
+dropping phone at a random angle,1,0,0,0,1,0
