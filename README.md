@@ -49,3 +49,11 @@ Data and recordings were meticulously analyzed to quantify accidental activation
 ## Statistical Analysis
 
 Employing t-tests and rank sum tests, we confirmed the shaking gesture's higher accident proneness, validating its lesser robustness compared to the face-down gesture. Both tests, however, come with limitations regarding data distribution assumptions and information loss.
+
+## Members
+| Student name | Student email |
+| --- | --- |
+| Yijia He | yijiah@uchicago.edu |
+| Skylar Liu | skylarliu@uchicago.edu |
+| Mark Xiong | haoxiang@uchicago.edu |
+| Yuyan Wang | wangyuyan03@uchicago.edu |
